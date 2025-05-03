@@ -3,7 +3,7 @@ Test Programming Project for ATS by Drew McLain
 
 # Setup
 ## Node
-* Be sure you run npm install
+* Be sure you run ```npm install```
 
 ## MySQL
 * Create your user, and set a password for access to mysql.
