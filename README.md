@@ -3,14 +3,15 @@ Test Programming Project for ATS by Drew McLain
 
 # Setup
 ## Node
-* Be sure you run ```npm install```
+* Be sure you run ```npm install``` after you clone the repo.
 
 ## MySQL
 * Create your user, and set a password for access to mysql.
 * Grant appropriate permissions for your user to the database.
+* Create your database, ```create database atstest```
 * Run the setup.sql SQL file against the database.
 
-```mysql atsTest -u dmclain -p < setup/database.sql```
+```mysql atstest -u dmclain -p < setup/database.sql```
 * Update the `mysqlConfig` variable in the server.js file to have your database credentials in it.
 
 ## Running

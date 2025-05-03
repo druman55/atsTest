@@ -13,6 +13,31 @@ app.use(bodyParser.json());
 app.use(cors());
 
 /*********************************/
+/** Configuration               **/
+/*********************************/
+
+// Socket Config
+const socketConfig = {
+	host: 'api.atscall.me',
+	port: 3102,
+	username: 'drew',
+	password: 'Password123',
+	authUrl: '/auth',
+	streamUrl: '/cdrs'
+};
+
+// MySQL Config
+const mysqlConfig = {
+	host: 'localhost',
+	user: 'dmclain',
+	password: 'someMySQLPassword',
+	database: 'atstest',
+	connectionLimit: 10
+};
+
+const keepAliveInterval = 5000; // 5 seconds
+
+/*********************************/
 /** API Routes                  **/
 /*********************************/
 
@@ -114,27 +139,6 @@ app.listen(port, () => {
 /*********************************/
 /** Setup the Socket Reader     **/
 /*********************************/
-
-// Socket Config
-const socketConfig = {
-	host: 'api.atscall.me',
-	port: 3102,
-	username: 'drew',
-	password: 'Password123',
-	authUrl: '/auth',
-	streamUrl: '/cdrs'
-};
-
-// MySQL Config
-const mysqlConfig = {
-	host: 'localhost',
-	user: 'dmclain',
-	password: 'someMySQLPassword',
-	database: 'atstest',
-	connectionLimit: 10
-};
-
-const keepAliveInterval = 5000; // 5 seconds
 
 // Global variables
 let mysqlPool;
